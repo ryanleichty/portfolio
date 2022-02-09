@@ -8,11 +8,11 @@ function FooterLink({ url, children }) {
 
 function Footer() {
   return (
-    <footer className='p-8 mt-auto grid grid-cols-2 sm:grid-cols-1 items-center text-xs font-mono uppercase tracking-[2px]'>
+    <footer className='p-8 mt-auto grid grid-cols-2 items-center gap-2 text-xs font-mono uppercase tracking-[2px] md:grid-cols-1'>
       <FooterLink url='mailto:hello@ryanleichty.com'>
-        ✌️ hello@ryanleichty.com
+        👋 hello@ryanleichty.com
       </FooterLink>
-      <nav className='flex justify-end sm:justify-start gap-4'>
+      <nav className='flex justify-end gap-4 md:justify-start  md:gap-2'>
         <FooterLink url='https://www.instagram.com/ryanleichty/'>
           Instagram
         </FooterLink>

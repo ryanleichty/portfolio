@@ -9,8 +9,15 @@ export default function About() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <article className='grid grid-cols-12 gap-4'>
-        <h1 className='text-6xl'>About</h1>
+      <article className=''>
+        <div className='max-w-[72ch] mx-auto my-32'>
+          <h1 className='font-serif text-9xl font-extralight'>About</h1>
+          <p className='mt-16 font-serif text-4xl leading-snug antialiased'>
+            Hi 👋, I’m Ryan. I’m a creative who likes working with code. An avid
+            learner, problem solver, and frontend designer/developer with more
+            than twelve years of experience.
+          </p>
+        </div>
       </article>
     </>
   );
