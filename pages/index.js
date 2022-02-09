@@ -1,5 +1,9 @@
 import Head from 'next/head';
 
+function HiMark() {
+  return 'Hi';
+}
+
 export default function Home() {
   return (
     <>
@@ -9,7 +13,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1 className='h-full text-[12.5vw] leading-[1.2]'>
+      <h1 className='mt-auto font-extralight text-[12.5vw] leading-[1.15]'>
         Designer <em>and</em> Coder
       </h1>
     </>

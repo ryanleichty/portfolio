@@ -1,4 +1,4 @@
-function SocialLink({ url, children }) {
+function FooterLink({ url, children }) {
   return (
     <a href={url} target='_blank' rel='noreferrer' className='p-2'>
       {children}
@@ -8,16 +8,18 @@ function SocialLink({ url, children }) {
 
 function Footer() {
   return (
-    <footer className='mt-auto grid grid-cols-2 text-xs font-mono uppercase tracking-[2px]'>
-      <button>?</button>
-      <nav className='flex justify-end gap-4 p-8'>
-        <SocialLink url='https://www.instagram.com/ryanleichty/'>
+    <footer className='p-8 mt-auto grid grid-cols-2 sm:grid-cols-1 items-center text-xs font-mono uppercase tracking-[2px]'>
+      <FooterLink url='mailto:hello@ryanleichty.com'>
+        ✌️ hello@ryanleichty.com
+      </FooterLink>
+      <nav className='flex justify-end sm:justify-start gap-4'>
+        <FooterLink url='https://www.instagram.com/ryanleichty/'>
           Instagram
-        </SocialLink>
-        <SocialLink url='https://www.linkedin.com/in/ryanleichty/'>
+        </FooterLink>
+        <FooterLink url='https://www.linkedin.com/in/ryanleichty/'>
           LinkedIn
-        </SocialLink>
-        <SocialLink url='https://github.com/ryanleichty'>GitHub</SocialLink>
+        </FooterLink>
+        <FooterLink url='https://github.com/ryanleichty'>GitHub</FooterLink>
       </nav>
     </footer>
   );
