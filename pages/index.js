@@ -13,8 +13,10 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1 className='mt-auto font-serif font-extralight text-[12.5vw] leading-[1.15]'>
-        Designer <em>and</em> Coder
+      <h1 className='mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] leading-[1.1] sm:font-light'>
+        Designer <em>and</em>
+        <br />
+        Coder
       </h1>
     </>
   );

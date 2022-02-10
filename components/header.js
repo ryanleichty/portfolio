@@ -36,10 +36,14 @@ export default function Header() {
   return (
     <header className='p-8 grid gap-4 grid-cols-2 font-serif text-4xl'>
       <Link href='/'>
-        <a className='sm:text-2xl'>Ryan Leichty</a>
+        <a className='sm:text-3xl'>Ryan Leichty</a>
       </Link>
 
-      <div className='flex items-center justify-end gap-16 md:gap-8'>
+      <div className='flex items-center justify-end'>
+        <DarkModeBtn />
+      </div>
+
+      {/* <div className='flex items-center justify-end gap-16 md:gap-8'>
         <nav className='md:hidden'>
           <ul className='flex gap-16'>{listItems}</ul>
         </nav>
@@ -51,9 +55,9 @@ export default function Header() {
           <span className='block w-full h-[1px] bg-black'></span>
           <span className='block w-full h-[1px] bg-black'></span>
         </button>
-      </div>
+      </div> */}
 
-      <div className={`fixed inset-0 ${!isOpen ? 'pointer-events-none' : ''}`}>
+      {/* <div className={`fixed inset-0 ${!isOpen ? 'pointer-events-none' : ''}`}>
         <div
           onClick={handleClick}
           className={`absolute inset-0 h-full bg-black transition-opacity duration-300 ${
@@ -72,7 +76,7 @@ export default function Header() {
           </nav>
           <DarkModeBtn />
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

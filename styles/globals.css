@@ -77,17 +77,27 @@
 }
 
 html {
-  --primary-color: #d9d9d5;
+  --primary-color: #ccccc2;
 }
 
 html {
   background-color: var(--primary-color);
-  font-smooth: antialiased;
-  -webkit-font-smoothing: antialiased;
 }
 
 html,
 body,
 #__next {
   height: 100%;
+}
+
+article a {
+  @apply border-b-2 border-black;
+}
+
+article ul {
+  @apply pl-6;
+}
+
+article li {
+  @apply list-disc list-outside;
 }
