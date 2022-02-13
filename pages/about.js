@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function About() {
+function About() {
   return (
     <>
       <Head>
@@ -25,3 +25,5 @@ export default function About() {
     </>
   );
 }
+
+export default About;

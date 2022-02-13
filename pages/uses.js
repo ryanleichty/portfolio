@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Uses() {
+function Uses() {
   return (
     <>
       <Head>
@@ -62,3 +62,5 @@ export default function Uses() {
     </>
   );
 }
+
+export default Uses;

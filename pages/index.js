@@ -1,10 +1,6 @@
 import Head from 'next/head';
 
-function HiMark() {
-  return 'Hi';
-}
-
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -24,3 +20,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
