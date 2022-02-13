@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import DarkModeBtn from './darkModeBtn';
+import DarkModeBtn from './DarkModeBtn';
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);

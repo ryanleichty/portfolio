@@ -5,7 +5,7 @@ function FooterLink({ url, children }) {
         href={url}
         target='_blank'
         rel='noreferrer'
-        className='inline-block py-2 sm:py-1 px-3 sm:p-2 rounded-md hover:bg-white hover:bg-opacity-50 transition-colors'
+        className='inline-block py-2 sm:py-1 px-3 sm:p-2'
       >
         {children}
       </a>
