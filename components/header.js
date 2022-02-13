@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import DarkModeBtn from './DarkModeBtn';
 
-export default function Header() {
+function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   function handleClick(e) {
@@ -80,3 +80,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

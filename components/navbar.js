@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function NavBar() {
+function NavBar() {
   const pages = [
     {
       id: 1,
@@ -32,3 +32,5 @@ export default function NavBar() {
     </div>
   );
 }
+
+export default NavBar;
