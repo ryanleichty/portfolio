@@ -24,7 +24,7 @@ function Document() {
           }}
         />
       </Head>
-      <body className='antialiased selection:bg-yellow-100 dark:bg-black dark:text-[#898775] transition-colors'>
+      <body className='bg-primary-500 antialiased transition-colors selection:bg-yellow-100 selection:bg-opacity-80 dark:selection:bg-opacity-10 dark:bg-black dark:text-primary-900'>
         <Main />
         <NextScript />
       </body>

@@ -25,7 +25,7 @@ const DarkModeIcon = () => (
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      className='dark:stroke-[#898775]'
+      className='dark:stroke-primary-900'
       d='M12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10C6.47715 2 2 6.47715 2 12c0 5.5228 4.47715 10 10 10Z'
       stroke='#000'
       strokeWidth='1.5'
@@ -33,7 +33,7 @@ const DarkModeIcon = () => (
       strokeLinejoin='round'
     />
     <path
-      className='dark:fill-[#898775]'
+      className='dark:fill-primary-900'
       d='M12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10v20Z'
       fill='#000'
     />

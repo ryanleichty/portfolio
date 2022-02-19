@@ -76,14 +76,6 @@
   font-display: fallback;
 }
 
-html {
-  --primary-color: #ccccc2;
-}
-
-html {
-  background-color: var(--primary-color);
-}
-
 html,
 body,
 #__next {
