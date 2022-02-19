@@ -34,7 +34,7 @@ function Header() {
   });
 
   return (
-    <header className='p-8 grid gap-4 grid-cols-[1fr_auto] font-serif text-4xl'>
+    <header className='p-8 grid gap-4 grid-cols-[1fr_auto] text-3xl tracking-wide uppercase'>
       <Link href='/'>
         <a className='sm:text-3xl'>Ryan Leichty</a>
       </Link>
