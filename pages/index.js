@@ -14,9 +14,12 @@ function Home() {
   };
 
   const word = {
-    hidden: { opacity: 0 },
+    hidden: {
+      y: 32,
+      opacity: 0,
+    },
     show: {
-      y: -32,
+      y: 1,
       opacity: 1,
       transition: {
         type: 'spring',
@@ -41,14 +44,23 @@ function Home() {
         variants={sentence}
         className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[15vw] leading-[1.1]'
       >
-        <motion.span variants={word} className='inline-block'>
+        <motion.span
+          variants={word}
+          className='inline-block will-change-transform'
+        >
           Designer
         </motion.span>{' '}
-        <motion.span variants={word} className='inline-block'>
+        <motion.span
+          variants={word}
+          className='inline-block will-change-transform after:inline-block after:w-[2vw]'
+        >
           <em>and</em>
         </motion.span>
         <br />
-        <motion.span variants={word} className='inline-block'>
+        <motion.span
+          variants={word}
+          className='inline-block will-change-transform'
+        >
           Coder
         </motion.span>
       </motion.h1>
