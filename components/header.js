@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
 import Link from 'next/link';
-import DarkModeBtn from './DarkModeBtn';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import ThemeButton from './ThemeButton';
+import { NAV as nav } from '../constants/nav';
 
 function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -10,24 +12,28 @@ function Header() {
     setIsOpen(!isOpen);
   }
 
-  const pages = [
-    {
-      id: 1,
-      title: 'About',
-      slug: '/about',
+  const variants = {
+    open: {
+      x: 0,
+      ease: 'easeOut',
+      transition: {
+        type: 'tween',
+      },
     },
-    {
-      id: 2,
-      title: 'Uses',
-      slug: '/uses',
+    closed: {
+      x: '100%',
+      ease: 'easeIn',
+      transition: {
+        type: 'tween',
+      },
     },
-  ];
+  };
 
-  const listItems = pages.map((page) => {
+  const listItems = nav.map((page) => {
     return (
-      <li key={page.id.toString()}>
+      <li key={page.name}>
         <Link href={page.slug}>
-          <a>{page.title}</a>
+          <a>{page.name}</a>
         </Link>
       </li>
     );
@@ -39,15 +45,15 @@ function Header() {
         <a className='sm:text-3xl'>Ryan Leichty</a>
       </Link>
 
-      <div className='flex items-center justify-end'>
-        <DarkModeBtn />
+      <div className='flex items-center justify-end gap-16 md:gap-8'>
+        <ThemeButton />
       </div>
 
       {/* <div className='flex items-center justify-end gap-16 md:gap-8'>
         <nav className='md:hidden'>
           <ul className='flex gap-16'>{listItems}</ul>
         </nav>
-        <DarkModeBtn />
+        <ThemeButton />
         <button
           onClick={handleClick}
           className='hidden md:flex flex-col justify-center gap-3 w-[40px] h-[40px]'
@@ -55,27 +61,23 @@ function Header() {
           <span className='block w-full h-[1px] bg-black'></span>
           <span className='block w-full h-[1px] bg-black'></span>
         </button>
-      </div> */}
+      </div>
 
-      {/* <div className={`fixed inset-0 ${!isOpen ? 'pointer-events-none' : ''}`}>
-        <div
-          onClick={handleClick}
-          className={`absolute inset-0 h-full bg-black transition-opacity duration-300 ${
-            !isOpen ? 'opacity-0' : 'opacity-10'
-          }`}
-        ></div>
-        <div
-          className={`${
-            isOpen
-              ? 'shadow-xl translate-x-0 ease-out'
-              : 'translate-x-full ease-in'
-          } relative flex flex-col justify-between gap-8 p-8 max-w-sm h-full ml-auto bg-slate-400 transition-transform duration-300`}
+      <div
+        className={`fixed inset-0 ${!isOpen ? 'pointer-events-none' : ''} z-10`}
+      >
+        <div onClick={handleClick} className={`absolute inset-0 h-full`}></div>
+        <motion.div
+          initial='closed'
+          animate={isOpen ? 'open' : 'closed'}
+          variants={variants}
+          className={`relative flex flex-col justify-between gap-8 p-8 max-w-sm sm:max-w-[calc(100%-64px)] h-full ml-auto bg-primary-300`}
         >
           <nav>
             <ul className='flex flex-col gap-8'>{listItems}</ul>
           </nav>
-          <DarkModeBtn />
-        </div>
+          <ThemeButton />
+        </motion.div>
       </div> */}
     </header>
   );
