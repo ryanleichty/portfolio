@@ -1,6 +1,29 @@
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 function Home() {
+  const sentence = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.25,
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  const word = {
+    hidden: { opacity: 0 },
+    show: {
+      y: -32,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        duration: 0.75,
+      },
+    },
+  };
   return (
     <>
       <Head>
@@ -12,11 +35,23 @@ function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <h1 className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[15vw] leading-[1.1]'>
-        Designer <em>and</em>
+      <motion.h1
+        initial='hidden'
+        animate='show'
+        variants={sentence}
+        className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[15vw] leading-[1.1]'
+      >
+        <motion.span variants={word} className='inline-block'>
+          Designer
+        </motion.span>{' '}
+        <motion.span variants={word} className='inline-block'>
+          <em>and</em>
+        </motion.span>
         <br />
-        Coder
-      </h1>
+        <motion.span variants={word} className='inline-block'>
+          Coder
+        </motion.span>
+      </motion.h1>
     </>
   );
 }
