@@ -17,18 +17,16 @@ function Footer() {
   });
 
   return (
-    <footer className='grid grid-cols-2 items-center gap-2 p-7 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] md:gap-2 md:grid-cols-1 sm:text-[0.5rem]'>
-      <div>
+    <footer className='p-7 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] md:text-[10px]'>
+      <nav className='flex gap-8 sm:justify-between sm:gap-4'>
         <a
           href='mailto:hello@ryanleichty.com'
           target='_blank'
           rel='noreferrer'
-          className='inline-block py-2 sm:py-1'
+          className='inline-block mr-auto py-2 sm:py-1 sm:hidden'
         >
-          hello@ryanleichty.com
+          👋 hello@ryanleichty.com
         </a>
-      </div>
-      <nav className='flex justify-end gap-8 md:flex-col md:justify-start md:gap-2'>
         {socialLinks}
       </nav>
     </footer>
