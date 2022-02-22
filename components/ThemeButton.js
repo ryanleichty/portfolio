@@ -30,6 +30,7 @@ const ThemeIcon = () => (
       viewBox='0 0 24 24'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className='sm:w-5 sm:h-5'
     >
       <path
         d='M12 21V3c-4.96286 0-9 4.03714-9 9 0 4.9629 4.03714 9 9 9Z'
