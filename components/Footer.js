@@ -17,7 +17,7 @@ function Footer() {
   });
 
   return (
-    <footer className='grid grid-cols-2 items-center gap-2 p-7 pt-12 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] md:gap-2 md:grid-cols-1 sm:text-[0.5rem]'>
+    <footer className='grid grid-cols-2 items-center gap-2 p-7 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] md:gap-2 md:grid-cols-1 sm:text-[0.5rem]'>
       <div>
         <a
           href='mailto:hello@ryanleichty.com'
