@@ -42,7 +42,7 @@ function Home() {
         initial='hidden'
         animate='show'
         variants={sentence}
-        className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[15vw] leading-[1.1]'
+        className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[18vw] leading-[1.1] sm:leading-none'
       >
         <motion.span
           variants={word}
