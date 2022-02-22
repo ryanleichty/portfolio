@@ -42,7 +42,7 @@ function Home() {
         initial='hidden'
         animate='show'
         variants={sentence}
-        className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[18vw] leading-[1.1] sm:leading-none'
+        className='pt-32 mt-auto -mb-8 md:mb-0 font-serif font-extralight text-[12vw] sm:text-[22vw] leading-none -z-10'
       >
         <motion.span
           variants={word}
@@ -56,7 +56,6 @@ function Home() {
         >
           <em>and</em>
         </motion.span>
-        <br />
         <motion.span
           variants={word}
           className='inline-block will-change-transform'
