@@ -3,16 +3,15 @@ import { SOCIAL_PROFILES as socialProfiles } from '../constants/social';
 function Footer() {
   const socialLinks = socialProfiles.map((profile) => {
     return (
-      <div key={profile.name}>
-        <a
-          href={profile.slug}
-          target='_blank'
-          rel='noreferrer'
-          className='inline-block py-2 sm:py-1'
-        >
-          {profile.name}
-        </a>
-      </div>
+      <a
+        key={profile.name}
+        href={profile.slug}
+        target='_blank'
+        rel='noreferrer'
+        className='inline-block py-2 sm:py-1'
+      >
+        {profile.name}
+      </a>
     );
   });
 
