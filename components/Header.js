@@ -40,15 +40,17 @@ function Header() {
   });
 
   return (
-    <header className='p-8 grid gap-4 grid-cols-[1fr_auto] text-3xl leading-none tracking-wide uppercase'>
-      <div>
-        <Link href='/'>
-          <a className='sm:text-2xl'>Ryan Leichty</a>
-        </Link>
-      </div>
+    <header className='px-8 pt-8 h-24 text-3xl leading-none tracking-wide uppercase'>
+      <div className='grid gap-4 grid-cols-[1fr_auto] items-center'>
+        <div>
+          <Link href='/'>
+            <a className='sm:text-2xl'>Ryan Leichty</a>
+          </Link>
+        </div>
 
-      <div className='flex items-center justify-end gap-16 md:gap-8'>
-        <ThemeButton />
+        <div>
+          <ThemeButton />
+        </div>
       </div>
 
       {/* <div className='flex items-center justify-end gap-16 md:gap-8'>
