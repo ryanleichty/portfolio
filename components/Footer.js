@@ -16,8 +16,8 @@ function Footer() {
   });
 
   return (
-    <footer className='p-7 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] md:text-[10px]'>
-      <nav className='flex gap-8 sm:justify-between sm:gap-4'>
+    <footer className='p-8 mt-auto font-mono text-xs leading-none uppercase tracking-[2px] whitespace-nowrap md:text-[10px]'>
+      <nav className='flex gap-8 overflow-x-scroll sm:justify-between sm:gap-4'>
         <a
           href='mailto:hello@ryanleichty.com'
           target='_blank'
