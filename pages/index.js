@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Ryan Leichty</title>
+        <title>Ryan Leichty • Designer and Coder</title>
         <meta
           name='description'
           content='Hi 👋, I’m Ryan. I’m a creative who likes working with code.'

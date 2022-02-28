@@ -4,7 +4,7 @@ function Uses() {
   return (
     <>
       <Head>
-        <title>Uses | Ryan Leichty</title>
+        <title>Uses • Ryan Leichty</title>
         <meta
           name='description'
           content='This is a list of my design, development and personal setups, including software, hardware and as much detail in between.'
