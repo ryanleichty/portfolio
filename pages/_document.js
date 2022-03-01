@@ -23,6 +23,8 @@ function Document() {
               `,
           }}
         />
+        <link rel='icon' href='/images/favicon.ico' sizes='any' />
+        <link rel='icon' href='/images/favicon.svg' type='image/svg+xml' />
       </Head>
       <body className='bg-primary-500 antialiased transition-colors selection:bg-yellow-100 selection:bg-opacity-80 dark:selection:bg-opacity-10 dark:bg-black dark:text-primary-900'>
         <Main />
