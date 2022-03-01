@@ -5,11 +5,23 @@ function Uses() {
     <>
       <Head>
         <title>Uses • Ryan Leichty</title>
+
         <meta
           name='description'
           content='This is a list of my design, development and personal setups, including software, hardware and as much detail in between.'
         />
-        <link rel='icon' href='/favicon.ico' />
+
+        <meta property='og:title' content='Ryan Leichty • Designer and Coder' />
+        <meta
+          property='og:description'
+          content='This is a list of my design, development and personal setups, including software, hardware and as much detail in between.'
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://www.ryanleichty.com/uses' />
+        <meta
+          property='og:image'
+          content='https://www.ryanleichty.com/images/og-default.png'
+        />
       </Head>
 
       <article className='max-w-[80ch] mx-auto my-32'>

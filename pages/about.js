@@ -5,11 +5,23 @@ function About() {
     <>
       <Head>
         <title>About • Ryan Leichty</title>
+
         <meta
           name='description'
-          content='Hi 👋, I’m Ryan. I’m a creative who likes working with code. An avid learner, determined problem solver, and UI designer/developer.'
+          content='I’m a creative who likes working with code. UI designer and developer.'
         />
-        <link rel='icon' href='/favicon.ico' />
+
+        <meta property='og:title' content='Ryan Leichty • Designer and Coder' />
+        <meta
+          property='og:description'
+          content='I’m a creative who likes working with code. UI designer and developer.'
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://www.ryanleichty.com/about' />
+        <meta
+          property='og:image'
+          content='https://www.ryanleichty.com/images/og-default.png'
+        />
       </Head>
 
       <article className='max-w-[72ch] mx-auto my-32'>
