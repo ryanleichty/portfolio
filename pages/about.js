@@ -1,25 +1,33 @@
 import Head from 'next/head';
+import { ABOUT_META as meta } from '../constants/meta';
 
 function About() {
   return (
     <>
       <Head>
-        <title>About • Ryan Leichty</title>
+        <title>{meta.title} • Ryan Leichty</title>
 
-        <meta
-          name='description'
-          content='I’m a creative who likes working with code. UI designer and developer.'
-        />
+        <meta name='description' content={meta.description} />
 
-        <meta property='og:title' content='Ryan Leichty • Designer and Coder' />
-        <meta
-          property='og:description'
-          content='I’m a creative who likes working with code. UI designer and developer.'
-        />
+        <meta property='og:title' content={`${meta.title} • Ryan Leichty`} />
+        <meta property='og:description' content={meta.description} />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://www.ryanleichty.com/about' />
+        <meta property='og:url' content='https://www.ryanleichty.com/' />
         <meta
           property='og:image'
+          content='https://www.ryanleichty.com/images/og-default.png'
+        />
+        <meta
+          property='og:image:alt'
+          content={`${meta.title} • Ryan Leichty`}
+        />
+
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@ryanleichty' />
+        <meta name='twitter:title' content={`${meta.title} • Ryan Leichty`} />
+        <meta name='twitter:description' content={meta.description} />
+        <meta
+          name='twitter:image'
           content='https://www.ryanleichty.com/images/og-default.png'
         />
       </Head>
