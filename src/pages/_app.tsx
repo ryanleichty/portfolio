@@ -2,9 +2,12 @@ import '../css/globals.css'
 import type { AppProps } from 'next/app'
 import localFont from '@next/font/local'
 
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+
 // @next/font will automatically optimize your fonts.
 // Read more: https://nextjs.org/docs/basic-features/font-optimization
-const mabry = localFont({
+const fontMabry = localFont({
   src: [
     {
       path: '../fonts/mabry-regular-pro.woff2',
@@ -17,8 +20,12 @@ const mabry = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${mabry.variable} font-sans`}>
+    <div
+      className={`${fontMabry.variable} flex min-h-full flex-col bg-gray-100 font-sans text-base antialiased`}
+    >
+      <Header />
       <Component {...pageProps} />
-    </main>
+      <Footer />
+    </div>
   )
 }
