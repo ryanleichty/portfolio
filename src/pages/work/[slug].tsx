@@ -1,3 +1,3 @@
-export default function Project() {
-  return <h1 className="text-4xl">Project</h1>
+export default function ProjectPage() {
+  return <h1>Project</h1>
 }
