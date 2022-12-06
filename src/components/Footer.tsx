@@ -1,16 +1,18 @@
 import Link from 'next/link'
+import Button from './Button'
+import MaxWidthWrapper from './MaxWidthWrapper'
 
 export default function Footer() {
   return (
     <footer className="mt-auto bg-black text-gray-400">
-      <div className="grid gap-96 p-8">
+      <MaxWidthWrapper className="grid gap-96 py-8">
         <div className="grid grid-cols-2 gap-4">
           <div className="text-6xl">Say hello!</div>
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-full xl:col-span-2">
-              <div className="text-xl">
+              <p className="text-xl">
                 I’m always happy to hear from you, whether it’s about something big or small.
-              </div>
+              </p>
               <Button theme="dark">Email me</Button>
             </div>
           </div>
@@ -32,7 +34,7 @@ export default function Footer() {
             </Link>
           </nav>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </footer>
   )
 }
