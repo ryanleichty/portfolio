@@ -1,0 +1,10 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    // // Plain object
+    ":\\s*?[\"'`]([^\"'`]*).*?,",
+    // // clsx
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    // // Headless UI
+    "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+  ]
+}
