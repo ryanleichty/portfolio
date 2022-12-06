@@ -11,6 +11,7 @@ export default function Footer() {
               <div className="text-xl">
                 I’m always happy to hear from you, whether it’s about something big or small.
               </div>
+              <Button theme="dark">Email me</Button>
             </div>
           </div>
         </div>
