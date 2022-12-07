@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tokens */
+:root {
+  --header-height: 4rem;
+  --screen-height: 100vh;
+
+  @media (min-width: 640px) {
+    --header-height: 5rem;
+  }
+
+  @media (min-width: 1280px) {
+    --header-height: 6rem;
+  }
+
+  @supports (height: 100svh) {
+    --screen-height: 100svh;
+  }
+}
+
 html,
 body,
 #__next {
