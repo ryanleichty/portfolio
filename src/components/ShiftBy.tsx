@@ -7,7 +7,7 @@ type Props = {
 
 export default function ShiftBy({ x = 0, y = 0, children, ...props }: Props) {
   return (
-    <span style={{ transform: `translate(${x}px, ${y}px)` }} {...props}>
+    <span style={{ translate: `${x}px ${y}px` }} {...props}>
       {children}
     </span>
   )
