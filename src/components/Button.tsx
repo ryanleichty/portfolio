@@ -1,11 +1,10 @@
 import { clsx } from 'clsx'
-import ShiftBy from './ShiftBy'
+import TrimText from './TrimText'
 
 type Props = {
   children?: React.ReactNode
   className?: string
   variant?: 'primary' | 'secondary'
-  theme?: 'light' | 'dark'
   width?: 'auto' | 'full'
   [key: string]: any
 }
@@ -14,20 +13,16 @@ export default function Button({
   children,
   className,
   variant = 'primary',
-  theme = 'light',
   width = 'auto',
   ...props
 }: Props) {
-  const baseClass = 'h-10 rounded px-4 flex items-center'
+  const baseClass = 'h-10 rounded-md px-4 flex items-center justify-center transition-colors'
 
   const variantClass = {
-    primary: '',
-    secondary: '',
-  }
-
-  const themeClass = {
-    light: 'bg-black text-gray-100',
-    dark: 'bg-gray-400 text-black',
+    primary:
+      'bg-black text-gray-100 dark:bg-gray-400 dark:text-black hover:bg-gray-900 hover:dark:bg-gray-600',
+    secondary:
+      'border border-black text-black dark:border-gray-400 dark:text-gray-400 hover:bg-black hover:text-gray-100 hover:dark:bg-gray-400 hover:dark:border-gray-400 hover:dark:text-black',
   }
 
   const widthClass = {
@@ -35,17 +30,14 @@ export default function Button({
     full: 'w-full',
   }
 
-  const styles = clsx(
-    baseClass,
-    variantClass[variant],
-    themeClass[theme],
-    widthClass[width],
-    className
-  )
-
   return (
-    <button className={styles} {...props}>
-      <ShiftBy y={-2}>{children}</ShiftBy>
+    <button
+      className={clsx(baseClass, variantClass[variant], widthClass[width], className)}
+      {...props}
+    >
+      <TrimText top={-0.35} bottom={-0.25} x={-0.05}>
+        {children}
+      </TrimText>
     </button>
   )
 }
