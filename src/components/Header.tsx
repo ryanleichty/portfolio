@@ -1,31 +1,62 @@
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+
 import MaxWidthWrapper from './MaxWidthWrapper'
 
 export default function Header() {
   return (
-    <header className="border-b border-black">
-      <MaxWidthWrapper className="grid h-20 grid-cols-12 items-center gap-4 md:h-24">
-        <div className="col-span-6 flex items-center gap-10">
-          <Link href="/" className="uppercase tracking-widest">
-            Ryan Leichty
+    <MaxWidthWrapper
       as="header"
+      className="grid h-header grid-cols-[auto_1fr] items-center gap-4 border-b border-black xl:grid-cols-2"
+    >
+      <div className="flex items-center gap-10">
+        <Link href="/" className="text-sm uppercase tracking-widest sm:text-base">
+          Ryan Leichty
+        </Link>
+      </div>
+      <div className="flex items-center justify-end gap-10">
+        <nav className="hidden gap-10 lg:flex">
+          <Link href="/about" className="uppercase tracking-widest">
+            About
           </Link>
+          <Link href="/work" className="uppercase tracking-widest">
+            Work
+          </Link>
+          <Link href="/uses" className="uppercase tracking-widest">
+            Uses
+          </Link>
+          <Link href="/colophon" className="uppercase tracking-widest">
+            Colophon
+          </Link>
+        </nav>
+        <div className="flex gap-6 xl:ml-auto">
+          <motion.button
+            className="h-6 w-6 shrink-0 rounded-full border border-black"
+            whileHover={{ rotate: -15 }}
+          >
+            <div className="h-full w-1/2 rounded-l-full bg-black"></div>
+          </motion.button>
+
+          <motion.a
+            className="group grid h-6 w-6 shrink-0 place-items-center rounded-full"
+            href="https://github.com/ryanleichty"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ rotate: -15 }}
+          >
+            <svg
+              viewBox="0 0 16 16"
+              aria-hidden="true"
+              className="transition-colors group-hover:fill-gray-700"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+          </motion.a>
         </div>
-        <div className="col-span-6 flex items-center gap-10">
-          <nav className="flex gap-10">
-            <Link href="/about" className="uppercase tracking-widest">
-              About
-            </Link>
-            <Link href="/work" className="uppercase tracking-widest">
-              Work
-            </Link>
-            <Link href="/uses" className="uppercase tracking-widest">
-              Uses
-            </Link>
-          </nav>
-          <div className="ml-auto h-6 w-6 shrink-0 rounded-full bg-black"></div>
-        </div>
-      </MaxWidthWrapper>
-    </header>
+      </div>
+    </MaxWidthWrapper>
   )
 }
