@@ -8,6 +8,7 @@ export default function Header() {
         <div className="col-span-6 flex items-center gap-10">
           <Link href="/" className="uppercase tracking-widest">
             Ryan Leichty
+      as="header"
           </Link>
         </div>
         <div className="col-span-6 flex items-center gap-10">
