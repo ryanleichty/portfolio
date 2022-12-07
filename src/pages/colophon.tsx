@@ -1,3 +1,12 @@
+import PageBanner from '../components/PageBanner'
+
 export default function ColophonPage() {
-  return <h1>Colophon</h1>
+  return (
+    <>
+      <PageBanner title="Colophon">
+        The details of my developer setup, software and tech. Check out uses.tech for a list of
+        other peoples uses pages.
+      </PageBanner>
+    </>
+  )
 }
