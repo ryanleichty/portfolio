@@ -20,9 +20,6 @@ const fontMabry = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div
-      className={`${fontMabry.variable} flex min-h-full flex-col bg-gray-100 font-sans text-base antialiased`}
-    >
     <div className={`${fontMabry.variable} flex min-h-full flex-col font-sans`}>
       <Header />
       <Component {...pageProps} />
