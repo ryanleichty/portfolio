@@ -2,8 +2,16 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import MaxWidthWrapper from '@components/MaxWidthWrapper'
+import useStickyState from '@hooks/useStickyState.hook'
 
 export default function Header() {
+  const [theme, setTheme] = useStickyState('light', 'theme')
+
+  function handleClick() {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+    document.documentElement.classList.toggle('dark')
+  }
+
   return (
     <MaxWidthWrapper
       as="header"
@@ -31,6 +39,7 @@ export default function Header() {
         </nav>
         <div className="flex gap-6 xl:ml-auto">
           <motion.button
+            onClick={handleClick}
             className="h-6 w-6 shrink-0 rounded-full border border-black"
             whileHover={{ rotate: -15 }}
           >
