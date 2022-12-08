@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import TrimText from './TrimText'
+import TrimText from '@components/TrimText'
 
 type Props = {
   children?: React.ReactNode

@@ -1,5 +1,5 @@
-import MaxWidthWrapper from './MaxWidthWrapper'
-import TrimText from './TrimText'
+import MaxWidthWrapper from '@components/MaxWidthWrapper'
+import TrimText from '@components/TrimText'
 
 export default function PageHeader({
   title,

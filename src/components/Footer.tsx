@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Button from './Button'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import TrimText from './TrimText'
+import TrimText from '@components/TrimText'
 
 export default function Footer() {
   return (

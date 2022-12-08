@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
-import MaxWidthWrapper from './MaxWidthWrapper'
-import TrimText from './TrimText'
+import MaxWidthWrapper from '@components/MaxWidthWrapper'
+import TrimText from '@components/TrimText'
 
 const motionParent = {
   hidden: {},

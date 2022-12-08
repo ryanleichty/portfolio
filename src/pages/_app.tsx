@@ -1,9 +1,9 @@
-import '../css/globals.css'
+import '@css/globals.css'
 import type { AppProps } from 'next/app'
 import localFont from '@next/font/local'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
 // @next/font will automatically optimize your fonts.
 // Read more: https://nextjs.org/docs/basic-features/font-optimization

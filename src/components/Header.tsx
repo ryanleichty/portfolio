@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import MaxWidthWrapper from './MaxWidthWrapper'
+import MaxWidthWrapper from '@components/MaxWidthWrapper'
 
 export default function Header() {
   return (
