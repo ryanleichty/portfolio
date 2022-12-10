@@ -2,21 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tokens */
-:root {
-  --header-height: 4rem;
-  --screen-height: 100vh;
+@layer base {
+  :root {
+    --header-height: 4rem;
+    --screen-height: 100vh;
 
-  @media (min-width: 640px) {
-    --header-height: 5rem;
-  }
+    --color-black: 0 0% 0%;
+    --color-white: 0 0% 100%;
+    --color-gray-50: 80 24% 96%;
+    --color-gray-100: 80 22% 92%;
+    --color-gray-200: 80 20% 84%;
+    --color-gray-300: 80 16% 76%;
+    --color-gray-400: 80 14% 68%;
+    --color-gray-500: 80 12% 60%;
+    --color-gray-600: 80 8% 50%;
+    --color-gray-700: 80 8% 40%;
+    --color-gray-800: 80 8% 28%;
+    --color-gray-900: 80 8% 18%;
 
-  @media (min-width: 1280px) {
-    --header-height: 6rem;
-  }
+    @media (min-width: 640px) {
+      --header-height: 5rem;
+    }
 
-  @supports (height: 100svh) {
-    --screen-height: 100svh;
+    @media (min-width: 1280px) {
+      --header-height: 6rem;
+    }
+
+    @supports (height: 100svh) {
+      --screen-height: 100svh;
+    }
   }
 }
 
