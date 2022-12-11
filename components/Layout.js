@@ -1,14 +1,12 @@
 import Header from './Header';
 import Footer from './Footer';
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   return (
-    <div className='flex flex-col min-h-full'>
+    <div className='flex min-h-full flex-col'>
       <Header />
-      <main className='px-8 flex-1 flex flex-col'>{children}</main>
+      <main className='flex flex-1 flex-col px-8'>{children}</main>
       <Footer />
     </div>
   );
 }
-
-export default Layout;

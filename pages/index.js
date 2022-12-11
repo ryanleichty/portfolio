@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { HOME_META as meta } from '../constants/meta';
 
-function Home() {
+export default function Home() {
   const sentence = {
     hidden: { opacity: 0 },
     show: {
@@ -58,7 +58,7 @@ function Home() {
         initial='hidden'
         animate='show'
         variants={sentence}
-        className='pt-32 mt-auto md:mb-0 font-serif font-extralight text-[12vw] sm:text-[22vw] leading-none -z-10'
+        className='-z-10 mt-auto pt-32 font-serif text-[12vw] font-extralight leading-none md:mb-0 sm:text-[22vw]'
       >
         <motion.span
           variants={word}
@@ -82,5 +82,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

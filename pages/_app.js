@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import Layout from '../components/Layout';
 import { CONSOLE_MSG as consoleMessage } from '../constants/console';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   console.log(consoleMessage);
 
   return (
@@ -11,5 +11,3 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
-
-export default MyApp;
