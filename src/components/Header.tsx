@@ -4,6 +4,25 @@ import { motion } from 'framer-motion'
 import MaxWidthWrapper from '@components/MaxWidthWrapper'
 import useStickyState from '@hooks/useStickyState.hook'
 
+const nav = [
+  {
+    slug: '/about',
+    title: 'About',
+  },
+  {
+    slug: '/work',
+    title: 'Work',
+  },
+  {
+    slug: '/uses',
+    title: 'Uses',
+  },
+  {
+    slug: '/colophon',
+    title: 'Colophon',
+  },
+]
+
 export default function Header() {
   const [theme, setTheme] = useStickyState('light', 'theme')
 
@@ -24,23 +43,18 @@ export default function Header() {
       </div>
       <div className="flex items-center justify-end gap-10">
         <nav className="hidden gap-10 lg:flex">
-          <Link href="/about" className="uppercase tracking-widest">
-            About
-          </Link>
-          <Link href="/work" className="uppercase tracking-widest">
-            Work
-          </Link>
-          <Link href="/uses" className="uppercase tracking-widest">
-            Uses
-          </Link>
-          <Link href="/colophon" className="uppercase tracking-widest">
-            Colophon
-          </Link>
+          {nav.map(({ slug, title }) => {
+            return (
+              <Link key={slug} href={slug} className="uppercase tracking-widest">
+                {title}
+              </Link>
+            )
+          })}
         </nav>
         <div className="flex gap-6 xl:ml-auto">
           <motion.button
             onClick={handleClick}
-            className="h-6 w-6 shrink-0 rounded-full border border-black"
+            className="h-6 w-6 shrink-0 rounded-full border-[1.5px] border-black"
             whileHover={{ rotate: -15 }}
           >
             <div className="h-full w-1/2 rounded-l-full bg-black"></div>
