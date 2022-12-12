@@ -1,7 +1,10 @@
+import Link from 'next/link'
 import { clsx } from 'clsx'
+
 import TrimText from '@components/TrimText'
 
 type Props = {
+  as?: React.ElementType
   children?: React.ReactNode
   className?: string
   variant?: 'primary' | 'secondary'
@@ -10,12 +13,15 @@ type Props = {
 }
 
 export default function Button({
+  as = 'button',
   children,
   className,
   variant = 'primary',
   width = 'auto',
   ...props
 }: Props) {
+  const Component = props?.href ? Link : as
+
   const baseClass = 'h-10 rounded-md px-4 flex items-center justify-center transition-colors'
 
   const variantClass = {
@@ -31,13 +37,13 @@ export default function Button({
   }
 
   return (
-    <button
+    <Component
       className={clsx(baseClass, variantClass[variant], widthClass[width], className)}
       {...props}
     >
       <TrimText top={-0.35} bottom={-0.25} x={-0.05}>
         {children}
       </TrimText>
-    </button>
+    </Component>
   )
 }
