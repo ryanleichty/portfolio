@@ -44,3 +44,11 @@ html {
   /* Round dots, alternate lower g, larger symbols */
   font-feature-settings: 'ss01', 'ss03', 'ss06';
 }
+
+p a {
+  border-bottom: 2px solid;
+}
+
+p [target='_blank']::after {
+  content: '\00A0↗';
+}
