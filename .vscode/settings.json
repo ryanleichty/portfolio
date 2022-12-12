@@ -1,10 +1,12 @@
 {
   "tailwindCSS.experimental.classRegex": [
-    // // Plain object
+    // Plain object
     ":\\s*?[\"'`]([^\"'`]*).*?,",
-    // // clsx
+    // clsx
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    // // Headless UI
-    "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)"
+    // Headless UI
+    "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)",
+    // Next.js OG image generator
+    "(?:tw)?=\\s*(?:\"|')([^(?:\"|')]*)"
   ]
 }
