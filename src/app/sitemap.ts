@@ -18,7 +18,7 @@ async function getPostSlugs(dir: string) {
 }
 
 export default async function sitemap() {
-  const postsDirectory = path.join(process.cwd(), 'app', 'writing')
+  const postsDirectory = path.join(process.cwd(), 'src', 'app', 'writing')
   const slugs = await getPostSlugs(postsDirectory)
 
   const posts = slugs.map((slug) => ({
