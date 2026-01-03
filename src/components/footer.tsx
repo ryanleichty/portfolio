@@ -17,10 +17,10 @@ export function Footer() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex h-7 items-center gap-1 rounded-full bg-gray-100 px-2 text-sm transition-colors duration-150 hover:bg-gray-800 hover:text-white dark:bg-gray-800 dark:text-gray-500"
+            className="group flex h-7 items-center gap-1 rounded-full bg-zinc-100 px-2 text-sm transition-colors duration-150 hover:bg-zinc-800 hover:text-white dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-100 dark:hover:text-zinc-900"
           >
             {link.name}
-            <ArrowUpRightIcon className="size-4 text-gray-400 transition-colors duration-150 group-hover:text-white" />
+            <ArrowUpRightIcon className="size-4 text-zinc-400 transition-colors duration-150 group-hover:text-white dark:text-zinc-500 dark:group-hover:text-zinc-900" />
           </a>
         ))}
       </div>

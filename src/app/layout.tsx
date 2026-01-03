@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} bg-white text-gray-900 antialiased dark:bg-zinc-950 dark:text-zinc-200`}
+      className={`${inter.className} bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-200`}
     >
       <body>
         <div className="flex min-h-screen flex-col justify-between p-8 pt-0 md:pt-8">
