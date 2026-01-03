@@ -3,7 +3,7 @@ import path from 'path'
 
 const SITE_URL = 'https://ryanleichty.com'
 
-async function getNoteSlugs(dir: string) {
+async function getPostSlugs(dir: string) {
   const entries = await fs.readdir(dir, {
     recursive: true,
     withFileTypes: true,
@@ -18,11 +18,11 @@ async function getNoteSlugs(dir: string) {
 }
 
 export default async function sitemap() {
-  const notesDirectory = path.join(process.cwd(), 'app', 'n')
-  const slugs = await getNoteSlugs(notesDirectory)
+  const postsDirectory = path.join(process.cwd(), 'app', 'writing')
+  const slugs = await getPostSlugs(postsDirectory)
 
-  const notes = slugs.map((slug) => ({
-    url: `${SITE_URL}/n/${slug}`,
+  const posts = slugs.map((slug) => ({
+    url: `${SITE_URL}/writing/${slug}`,
     lastModified: new Date().toISOString(),
   }))
 
@@ -31,5 +31,5 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }))
 
-  return [...routes, ...notes]
+  return [...routes, ...posts]
 }
