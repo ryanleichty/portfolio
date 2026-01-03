@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.mdx", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "app/writing/ai/*.tsx"]
+  "exclude": ["node_modules", "src/app/writing/ai/*.tsx"]
 }
