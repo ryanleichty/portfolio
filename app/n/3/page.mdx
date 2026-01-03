@@ -3,7 +3,7 @@ export const metadata = {
   alternates: {
     canonical: '/n/3',
   },
-}; 
+}
 
 # 6 CSS Patterns to Cut Boilerplate
 
@@ -21,19 +21,19 @@ Stop fighting cascade weight—wrap base rules in `:where()`:
   line-height: 1.2;
   margin: 0;
 }
-````
+```
 
-Selectors inside `:where()` weigh *0*, so your utility classes still win.
+Selectors inside `:where()` weigh _0_, so your utility classes still win.
 
 ---
 
 ## 2. **Logical Properties > Four-Direction Madness**
 
-Goodbye `padding-left` vs. `padding-right`. One line covers LTR *and* RTL:
+Goodbye `padding-left` vs. `padding-right`. One line covers LTR _and_ RTL:
 
 ```css
 .card {
-  padding-inline: 1rem;  /* left & right */
+  padding-inline: 1rem; /* left & right */
   padding-block: 0.75rem; /* top & bottom */
 }
 ```
@@ -59,7 +59,7 @@ Parent-aware styling—finally native.
 
 ## 4. **Container Queries for Truly Responsive Components**
 
-Skip breakpoint soup; size to *context* instead of viewport:
+Skip breakpoint soup; size to _context_ instead of viewport:
 
 ```css
 .card {
@@ -101,7 +101,9 @@ Group utilities, components, and overrides—predictably:
 
 /* later in the file… */
 @layer utilities {
-  .text-center { text-align: center; }
+  .text-center {
+    text-align: center;
+  }
 }
 ```
 

@@ -3,7 +3,7 @@ export const metadata = {
   alternates: {
     canonical: '/n/1',
   },
-};
+}
 
 # 5 Tiny CLI Tricks You (Probably) Didn’t Know
 
@@ -17,13 +17,13 @@ Fish out that elusive command you ran last Tuesday:
 
 ```bash
 history | grep docker | fzf
-````
+```
 
 Hit **Enter** and it pastes right back to your prompt like magic.
 
 ---
 
-## 2. **Reverse-search a Git log by file *content***
+## 2. **Reverse-search a Git log by file _content_**
 
 Combine `git log` with `-S` (search diff) to find when a string first appeared:
 
@@ -55,7 +55,7 @@ Now share the generated URL on Slack and watch eyebrows rise.
 
 ---
 
-## 5. **Measure *anything* with `time` + subshell**
+## 5. **Measure _anything_ with `time` + subshell**
 
 How long does your linter actually take?
 
@@ -63,4 +63,4 @@ How long does your linter actually take?
 time (npm run lint > /dev/null)
 ```
 
-> 💡 *Pro-tip:* wrap this in a `pre-push` hook so slow commands get caught early.
+> 💡 _Pro-tip:_ wrap this in a `pre-push` hook so slow commands get caught early.

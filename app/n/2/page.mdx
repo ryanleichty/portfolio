@@ -3,7 +3,7 @@ export const metadata = {
   alternates: {
     canonical: '/n/2',
   },
-};
+}
 
 # 6 Sneaky JavaScript Patterns to Cut Boilerplate
 
@@ -17,13 +17,11 @@ Stop writing five nested guards:
 
 ```js
 // Old
-const theme = user && user.settings && user.settings.theme
-  ? user.settings.theme
-  : 'light';
+const theme = user && user.settings && user.settings.theme ? user.settings.theme : 'light'
 
 // New
-const theme = user?.settings?.theme ?? 'light';
-````
+const theme = user?.settings?.theme ?? 'light'
+```
 
 Fewer lines, same safety.
 
@@ -35,12 +33,12 @@ Aggregate related exports into a single “barrel” file:
 
 ```js
 // utils/index.js
-export * from './format';
-export * from './validate';
-export * from './fetch';
+export * from './format'
+export * from './validate'
+export * from './fetch'
 
 // SomeComponent.js
-import { formatDate, validateEmail, getJSON } from '@/utils';
+import { formatDate, validateEmail, getJSON } from '@/utils'
 ```
 
 Kill import clutter without sacrificing tree-shaking.
@@ -52,13 +50,13 @@ Kill import clutter without sacrificing tree-shaking.
 Cache heavy computations tied to objects—no leaks:
 
 ```js
-const cache = new WeakMap();
+const cache = new WeakMap()
 
 export function expensive(obj) {
-  if (cache.has(obj)) return cache.get(obj);
-  const result = crunchNumbers(obj); // 🚀 costly
-  cache.set(obj, result);
-  return result;
+  if (cache.has(obj)) return cache.get(obj)
+  const result = crunchNumbers(obj) // 🚀 costly
+  cache.set(obj, result)
+  return result
 }
 ```
 
@@ -77,19 +75,23 @@ const escape = (strings, ...values) =>
       acc +
       str +
       (values[i]
-        ? String(values[i]).replace(/[&<>"']/g, (s) => ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;',
-          })[s])
+        ? String(values[i]).replace(
+            /[&<>"']/g,
+            (s) =>
+              ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;',
+              })[s],
+          )
         : ''),
     '',
-  );
+  )
 
-const name = '<script>alert(1)</script>';
-document.body.innerHTML = escape`<p>Hello, ${name}!</p>`;
+const name = '<script>alert(1)</script>'
+document.body.innerHTML = escape`<p>Hello, ${name}!</p>`
 ```
 
 Zero dependencies, maximum safety.
@@ -101,17 +103,17 @@ Zero dependencies, maximum safety.
 Stop orphaning network calls on route changes:
 
 ```js
-const controller = new AbortController();
-const { signal } = controller;
+const controller = new AbortController()
+const { signal } = controller
 
 fetch('/api/data', { signal })
   .then((r) => r.json())
   .catch((e) => {
-    if (e.name !== 'AbortError') throw e;
-  });
+    if (e.name !== 'AbortError') throw e
+  })
 
 // later…
-controller.abort();
+controller.abort()
 ```
 
 No more “state update on unmounted component” warnings.
@@ -126,9 +128,9 @@ Forget custom helpers—use the built-ins:
 const usd = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
-}).format(1999.99); // "$1,999.99"
+}).format(1999.99) // "$1,999.99"
 
-const isoDate = new Intl.DateTimeFormat('sv-SE').format(new Date());
+const isoDate = new Intl.DateTimeFormat('sv-SE').format(new Date())
 // "2025-06-05"
 ```
 

@@ -4,7 +4,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "delete": "rm -rf app/n"
+    "delete": "rm -rf app/n",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@next/mdx": "15.3.3",
@@ -23,6 +25,8 @@
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "postcss": "^8.5.4",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3"
   }
